@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript" src="../lib/wire.js"></script>
+  <script type="text/javascript">
+
+    var thread = new Wire(function() {
+      postMessage("Hello");
+    });
+
+    thread.onmessage(function(data) {
+      console.log(data.data);
+    });
+  </script>
+  </head>
+  <body>
+</body>
+</html>
