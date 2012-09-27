@@ -5,14 +5,13 @@
   <title></title>
   <script type="text/javascript" src="../lib/wire.js"></script>
   <script type="text/javascript">
+      var thread = new Wire(function() {
+        postMessage(importScripts.toString());
+      });
 
-    var thread = new Wire(function() {
-      postMessage("Hello");
-    });
-
-    thread.onmessage(function(data) {
-      console.log(data.data);
-    });
+      thread.onmessage(function(message) {
+          console.log(message.data)
+      });
   </script>
   </head>
   <body>
