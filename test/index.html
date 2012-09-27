@@ -6,11 +6,11 @@
   <script type="text/javascript" src="../lib/wire.js"></script>
   <script type="text/javascript">
       var thread = new Wire("async", function() {
-          postMessage(123);
+        postMessage(123);
       });
 
       thread.onmessage(function(message) {
-        console.log(this.name, this.state)
+        console.log(this)
       });
   </script>
   </head>
